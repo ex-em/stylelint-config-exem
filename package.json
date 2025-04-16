@@ -13,7 +13,7 @@
   "keywords": [
     "exem"
   ],
-  "author": "EXEM-DPM-FE",
+  "author": "exem <dev_client@ex-em.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ex-em/stylelint-config-exem/issues"
