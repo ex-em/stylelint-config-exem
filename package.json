@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-exem-frontend",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "Exem CSS Style Guide",
   "main": "index.js",
   "files": [
@@ -13,19 +13,22 @@
   "keywords": [
     "exem"
   ],
-  "author": "EXEM-DPM-FE",
+  "author": "exem <dev_client@ex-em.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ex-em/stylelint-config-exem/issues"
   },
   "homepage": "https://github.com/ex-em/stylelint-config-exem#readme",
   "dependencies": {
-    "stylelint-config-recommended": "^8.0.0",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-recommended-scss": "^7.0.0",
-    "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-config-standard-scss": "^5.0.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-scss": "^4.3.0"
+    "stylelint-config-recommended": "^15.0.0",
+    "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-config-recommended-vue": "^1.6.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.11.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^16"
   }
 }

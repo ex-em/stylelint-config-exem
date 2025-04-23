@@ -8,12 +8,11 @@ module.exports = {
     'stylelint-config-html',
     'stylelint-config-html/vue',
   ],
-  plugins: [
-    'stylelint-order',
-    'stylelint-scss',
-  ],
+  plugins: ['stylelint-order', 'stylelint-scss'],
   rules: {
     'alpha-value-notation': 'number',
+
+    // at-rule
     'at-rule-empty-line-before': [
       'always',
       {
@@ -22,25 +21,12 @@ module.exports = {
         ignoreAtRules: ['else'],
       },
     ],
-    'at-rule-name-case': 'lower',
-    'at-rule-name-space-after': 'always-single-line',
     'at-rule-no-vendor-prefix': true,
-    'at-rule-semicolon-newline-after': 'always',
-    'block-closing-brace-empty-line-before': 'never',
-    'block-closing-brace-newline-after': [
-      'always',
-      {
-        ignoreAtRules: ['if', 'else'],
-      },
-    ],
-    'block-closing-brace-newline-before': 'always-multi-line',
-    'block-closing-brace-space-before': 'always-single-line',
-    'block-opening-brace-newline-after': 'always-multi-line',
-    'block-opening-brace-space-after': 'always-single-line',
-    'block-opening-brace-space-before': 'always',
+
     'color-function-notation': 'legacy',
-    'color-hex-case': 'upper',
     'color-hex-length': 'long',
+
+    // comment
     'comment-empty-line-before': [
       'always',
       {
@@ -49,6 +35,7 @@ module.exports = {
       },
     ],
     'comment-whitespace-inside': 'always',
+
     'custom-property-empty-line-before': [
       'always',
       {
@@ -68,17 +55,10 @@ module.exports = {
         message: 'Expected custom property name to be kebab-case',
       },
     ],
-    'declaration-bang-space-after': 'never',
-    'declaration-bang-space-before': 'always',
-    'declaration-block-semicolon-newline-after': 'always-multi-line',
-    'declaration-block-semicolon-space-after': 'always-single-line',
-    'declaration-block-semicolon-space-before': 'never',
+
+    // declaration
     'declaration-block-single-line-max-declarations': 1,
-    'declaration-block-trailing-semicolon': 'always',
     'declaration-block-no-redundant-longhand-properties': true,
-    'declaration-colon-newline-after': 'always-multi-line',
-    'declaration-colon-space-after': 'always-single-line',
-    'declaration-colon-space-before': 'never',
     'declaration-empty-line-before': [
       'always',
       {
@@ -86,11 +66,10 @@ module.exports = {
         ignore: ['after-comment', 'inside-single-line-block'],
       },
     ],
+
     'font-family-name-quotes': 'always-where-recommended',
-    'function-comma-newline-after': 'always-multi-line',
-    'function-comma-space-after': 'always-single-line',
-    'function-comma-space-before': 'never',
-    'function-max-empty-lines': 0,
+
+    // function
     'function-name-case': 'lower',
     'function-no-unknown': [
       true,
@@ -98,50 +77,37 @@ module.exports = {
         ignoreFunctions: [/^\*|\+|-|\//g],
       },
     ],
-    'function-parentheses-newline-inside': 'always-multi-line',
-    'function-parentheses-space-inside': 'never-single-line',
     'function-url-quotes': 'always',
-    'function-whitespace-after': 'always',
+
     'hue-degree-notation': 'angle',
     'import-notation': 'string',
-    indentation: 2,
     'keyframes-name-pattern': [
       '^([a-z][a-z0-9]*)(-[a-z0-9]+)*$',
       {
         message: 'Expected keyframe name to be kebab-case',
       },
     ],
+    // general
     'length-zero-no-unit': true,
-    'max-empty-lines': 1,
     'max-nesting-depth': 3,
-    'media-feature-colon-space-after': 'always',
-    'media-feature-colon-space-before': 'never',
-    'media-feature-name-case': 'lower',
-    'media-feature-name-no-vendor-prefix': true,
-    'media-feature-parentheses-space-inside': 'never',
-    'media-feature-range-operator-space-after': 'always',
-    'media-feature-range-operator-space-before': 'always',
-    'media-query-list-comma-newline-after': 'always-multi-line',
-    'media-query-list-comma-space-after': 'always-single-line',
-    'media-query-list-comma-space-before': 'never',
-    'no-empty-first-line': true,
     'no-empty-source': true,
-    'no-eol-whitespace': true,
-    'no-missing-end-of-source-newline': true,
-    'number-leading-zero': 'always',
+
+    // media
+    'media-feature-name-no-vendor-prefix': true,
+
+    // number
     'number-max-precision': 4,
-    'number-no-trailing-zeros': true,
-    'property-case': 'lower',
+
+    // property
     'property-no-vendor-prefix': true,
     'rule-empty-line-before': [
       'never-multi-line',
       {
-        ignore: [
-          'after-comment',
-          'inside-block',
-        ],
+        ignore: ['after-comment', 'inside-block'],
       },
     ],
+
+    // scss
     'scss/at-else-closing-brace-newline-after': 'always-last-in-chain',
     'scss/at-else-closing-brace-space-after': 'always-intermediate',
     'scss/at-else-empty-line-before': 'never',
@@ -150,8 +116,6 @@ module.exports = {
     'scss/at-function-parentheses-space-before': 'never',
     'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
     'scss/at-if-closing-brace-space-after': 'always-intermediate',
-    'scss/at-import-no-partial-leading-underscore': true,
-    'scss/at-import-partial-extension-blacklist': ['scss'],
     'scss/at-mixin-argumentless-call-parentheses': 'always',
     'scss/at-mixin-parentheses-space-before': 'never',
     'scss/at-mixin-pattern': '^[a-z]+([a-z0-9-_]+[a-z0-9]+)?$',
@@ -163,40 +127,28 @@ module.exports = {
     'scss/double-slash-comment-whitespace-inside': 'always',
     'scss/percent-placeholder-pattern': '^[a-z]+([a-z0-9-_]+[a-z0-9]+)?$',
     'scss/selector-no-redundant-nesting-selector': true,
-    'selector-attribute-brackets-space-inside': 'never',
-    'selector-attribute-operator-space-after': 'never',
-    'selector-attribute-operator-space-before': 'never',
+
+    // selector
     'selector-attribute-quotes': 'always',
-    'selector-combinator-space-after': 'always',
-    'selector-combinator-space-before': 'always',
     'selector-class-pattern': '^[a-z][a-zA-Z0-9_-]+$',
-    'selector-descendant-combinator-no-non-space': true,
     'selector-id-pattern': [
       '^([a-z][a-z0-9]*)(-[a-z0-9]+)*$',
       {
         message: 'Expected id selector to be kebab-case',
       },
     ],
-    'selector-list-comma-newline-after': 'always',
-    'selector-list-comma-space-before': 'never',
-    'selector-max-empty-lines': 0,
     'selector-max-compound-selectors': 3,
     'selector-no-vendor-prefix': true,
     'selector-not-notation': 'complex',
-    'selector-pseudo-class-case': 'lower',
-    'selector-pseudo-class-parentheses-space-inside': 'never',
-    'selector-pseudo-element-case': 'lower',
     'selector-pseudo-element-colon-notation': 'double',
     'selector-type-case': 'lower',
     'selector-no-qualifying-type': true,
-    'string-quotes': 'single',
-    'unit-case': 'lower',
+
+    // value
     'value-keyword-case': 'lower',
-    'value-list-comma-newline-after': 'always-multi-line',
-    'value-list-comma-space-after': 'always-single-line',
-    'value-list-comma-space-before': 'never',
-    'value-list-max-empty-lines': 0,
     'value-no-vendor-prefix': true,
+
+    // order
     'order/order': [
       {
         type: 'at-rule',
